@@ -6,7 +6,7 @@ import {
   OsEventTypeList,
 } from '@evenrealities/even_hub_sdk'
 
-const DIGEST_URL = 'https://ping-backend.vercel.app/api/digest'
+const DIGEST_URL = 'https://ping-backend-indol.vercel.app/api/digest'
 
 type DigestItem = {
   chat: string

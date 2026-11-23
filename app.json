@@ -10,7 +10,7 @@
     {
       "name": "network",
       "desc": "Fetch Telegram digests and send replies through the Ping backend.",
-      "whitelist": ["https://ping-backend.vercel.app"]
+      "whitelist": ["https://ping-backend-indol.vercel.app"]
     },
     {
       "name": "g2-microphone",
