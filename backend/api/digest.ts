@@ -33,6 +33,14 @@ function titleOf(m: TgMessage): string {
 }
 
 export default async function handler(req: any, res: any) {
+  // The G2 app fetches this from a different origin, so the response must
+  // allow cross-origin reads, and preflight requests must be answered.
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
+  if (req.method === 'OPTIONS') {
+    res.status(204).end();
+    return;
+  }
   if (req.method !== 'GET') {
     res.status(405).json({ error: 'GET only' });
     return;
